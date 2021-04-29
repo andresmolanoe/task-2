@@ -11,4 +11,4 @@ pacman::p_load(tidyverse,reshape2,readxl,data.table)
 
 #1. Loops (40% nota)
   #1.0 
-  lista_df = readRDS("data/input/lista.rds")
+  lista_df <- readRDS("~/2021-1/Taller de R/task-2/data/input/lista.rds")

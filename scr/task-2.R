@@ -2,6 +2,7 @@
 #Elaborado por: Joaquin Correa (201730895), Andres Molano (201814276), Ricardo Rodriguez(201822271)
 #Fecha: 29 de abril de 2021
 #--------------------------
+#Taller A
 
 #Eliminar objetos antiguos
 rm(list=ls())

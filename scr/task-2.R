@@ -35,7 +35,7 @@ pacman::p_load(tidyverse,reshape2,readxl,data.table)
    #2.1 Pintamos sobre la consola una tabla de frecuencia para cada variable
    lapply(df, function(x) table (x) %>% sort(decreasing = T) %>% head(10))
          
- #3. Familia apply (30% nota)
+ #3. Lapply (20% nota)
    #3.1 Creamos la funcion y para que todas los elementos de un vector de caracteres queden escritos en minuscula
    y <- function (x){
         if is.character(lista_df[[i]] == T)
@@ -43,7 +43,7 @@ pacman::p_load(tidyverse,reshape2,readxl,data.table)
      }
         
    #3.2 Aplicamos esta funcion a df
-   lapply(lista_df, function(y))
+   lapply(df, function(y) table (y))
          
   
   

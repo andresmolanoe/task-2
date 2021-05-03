@@ -39,9 +39,9 @@ pacman::p_load(tidyverse,reshape2,readxl,data.table)
    #3.1 Creamos la funcion y para que todas los elementos de un vector de caracteres queden escritos en minuscula
    y <- function (x){
         if is.character(lista_df[[i]] == T)
-        x = x %>% tolower (.) %>% trims 
+        x = x %>% tolower (.) %>% trims (.)
+     }
         
-          
    #3.2 Aplicamos esta funcion a df
    lapply(lista_df, function(y))
          

@@ -44,16 +44,19 @@ lapply(df, function(x) table(x) %>% sort(decreasing = T) %>% head(10))
 
 #se usa la funcion skim que muestra las estadisticas principales de las variables
 skim(df)
-         
- #3. Lapply (20% nota)
-   #3.1 Creamos la funcion y para que todas los elementos de un vector de caracteres queden escritos en minuscula
-   y <- function (x){
-        if is.character(lista_df[[i]] == T)
-        x = x %>% tolower (.) %>% trims (.)
-     }
-        
-   #3.2 Aplicamos esta funcion a df
-   lapply(df, function(y) table (y))
-         
-  
-  
+
+#3. Lapply
+#3.1 Creamos la funcion y para que todas los elementos de un vector de caracteres queden escritos en minuscula
+y = function(v) {
+  if (is.character(v)) return(tolower(v))
+  else return(v)
+}
+
+#3.2 Aplicamos esta funcion a df
+df = data.frame(lapply(df, y))
+
+#BONO (3.1 y 3.2 en menos codigo)
+df = data.frame(lapply(df, function(v) {
+  if (is.character(v)) return(tolower(v))
+  else return(v)
+}))

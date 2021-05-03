@@ -3,7 +3,6 @@
 
 #Taller A
 
-
 #Eliminar objetos antiguos
 rm(list=ls())
 
@@ -41,6 +40,7 @@ pacman::p_load(tidyverse,reshape2,readxl,data.table)
    y <- 
           
    #3.2 Aplicamos esta funcion a df
+   lapply(df, function (y))
          
   
   
